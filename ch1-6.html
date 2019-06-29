@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="master.css">
+    <title>Chapters 3 to 6</title>
+  </head>
+  <body>
+<section> <!--Ch3 -->
+  <details>
+    <summary><h2>Ch 3: Javascript Numbers</h2></summary>
+
+    <section id="modExp1">
+      <details>
+        <summary><h3>Modular Exponentation</h3></summary>
+        <p>
+          Given three numbers x, y, and p, compute (xˆy) % p.
+        </p>
+        <div class="inputs">
+          <label for="x-modExp1">x: </label><input class="go" name="x-modExp1" type="number" value="1"></input><br>
+          <label for="y-modExp1">y: </label><input class="go" name="y-modExp1" type="number" value="1"></input><br>
+          <label for="p-modExp1">p: </label><input class="go" name="p-modExp1" type="number" value="1"></input><br>
+        </div>
+        <div class="outputs">
+          Simply <code>return (x^y)%p</code> quickly results in values for <code>(x^y)</code> wich exceed <code>MAX_VALUE</code>, and return <code>NaN</code>.
+          <div class="output">...</div>
+          A better aproach:
+          <div class="output">...</div>
+        </div>
+      </details>
+    </section>
+    <section id="ch3_PrimesLessThan">
+      <details >
+        <summary><h3>Primes Less than n</h3></summary>
+        <p>
+          Print all primes, less than <code>n</code>
+        </p>
+        <div class="inputs">
+          <input class="go" type="number" value="10">
+        </div>
+        <div class="outputs">
+          <div class="output">...</div>
+        </div>
+      </details>
+    </section>
+    <section id="ch3_uglyNumbers">
+      <details>
+        <summary><h3>Check for prime factors</h3></summary>
+        <p>
+          Let us define "ugly numbers"as those whose only prime factors are 2, 3, or 5.
+          1 is also ugly.<br>
+          The first 11 ugly numbers are <code>[1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15]</code><br>
+          How can we find all ugly numbers below a given number?
+        </p>
+        <div class="inputs">
+          <label for=ch3_uglyNumbers_x>Max number: </label>
+          <input class="go" value="11" type="number" min="2">
+        </div>
+        <div class="outputs">
+          <div class="output"></div>
+        </div>
+      </details>
+    </section>
+  </details>
+</section> <!-- Chapter 3 end -->
+<section> <!--Ch4 -->
+  <details>
+    <summary><h2>Ch 4: Javascript Strings</h2></summary>
+    <p>No exercizes, but there are some notes for quick-reference later.</p>
+    <details>
+    <summary><h3>Common Regex patterns</h3></summary>
+    <table>
+      <tr><td>/\d+/</td><td>Any numeric characters</td></tr>
+      <tr><td>/^\d+$/</td><td>Only numeric characters</td></tr>
+      <tr><td>/^[0-9]*.[0-9]*[0-9]+$/</td><td>Float numeric characters</td></tr>
+      <tr><td>/[a-zA-Z0-9]/</td><td>Any alphanumeric character</td></tr>
+    </table>
+  </details>
+
+</details></section> <!-- Chapter 4 end -->
+<section> <!--Ch5 -->
+  <details >
+    <summary ><h2>Ch: 5 Javascript Arrays</h2></summary>
+    <details>
+      <summary>Arrays represent a collection of items.</summary>
+      <p>Arrays are a fundamental data structure. The objects stored in them can of any type, or combination of types.<br>
+      They are denoted/built with [thing1,thing2,cat,hat];</p>
+      <p>
+        The four fundamental operations  of an array, or any data-structure, are:<br>
+        (note: The Big(O) values below are the "should be" values, and may vary)
+      </p>
+      <dl>
+        <dt><em>Insertion</em></dt>
+          <dd>Adding a new item inside a data structure.</dd>
+          <dd>.push(<var>element</var>), add <var>element</var> to the end of the array. O(1)</dd>
+        <dt><em>Deletion</em></dt>
+          <dd>Removing an item from the data structure.</dd>
+          <dd>.pop() removes the last element of the array. O(1)</dd>
+        <dt><em>Access</em></dt>
+          <dd>Access the item stored in a known point in the data structure.</dd>
+        <dd>array[<var>index</var>] returns the element at index <var>index</var> O(1)</dd>
+        <dt><em>Iteration</em></dt>
+          <dd>The act of going over each of the items in a data structure. Fundamental to <em>Search</em>ing a data structure.</dd>
+          <dd>Most often done with a <code>for(<var>i</var>; condition; increment)</code> loop. O(n) </dd>
+        <dd><code>for(<var>index</var> in <var>array</var>)</code>. This will run a loop once for each key (indexes for an array, key's for an object) in the data structure, assigning each key to the <var>element</var> variable in turn.</dd>
+        <dd><code>for(<var>value</var> of <var>array</var>)</code> will do the same, but uses the actual values stored in the data structure, rather than the keys.</dd>
+      </dl>
+      <p>
+
+      </p>
+    </details>
+
+    <section id="ch5_sumToWeight">
+      <details >
+        <summary><h3>Element sum up to a value, O(<var>n</var>&#178;)</h3></summary>
+        <p>
+          Given an <var>array</var> and a <var>weight</var>, find two elements of that <var>array</var> that sum to <var>weight</var>.
+        </p>
+        <div class="inputs">
+          A comma separated list of integers.<br>
+          <label for="ch5-1-arr">Array:</label><input name="ch5-1-arr" type="text" class="go" value="1,2,3,4,5"><br>
+          <label for="ch5-1-w">Weight</label><input name="ch5-1-w" type="number" class="go" min="2" value="2">
+        </div>
+        <div class="outputs">
+          <div class="output">...</div>
+        </div>
+      </details>
+    </section>
+    <section id="ch5_sumToWeightBetter">
+      <details >
+        <summary><h3>Element sum up to a value O(<var>n</var>)</h3></summary>
+        <p>
+          Cubic time is kinda ok. Sorta. Linear time would be better.<br>
+          If we prepare a hash table for each item in the array, and check to see
+          if there is a matching entry in the table for each subsequent element,
+          we can reduce this to linear time.
+        </p>
+        <div class="inputs">
+          A comma seperated list of integers.<br>
+          Array: <input class="go" type="text" pattern="^(\d+(,\d+)*)?$" value="0,1,2,3,4,5"><br>
+          Weight: <input class="go" type="number" min="2" value="2">
+        </div>
+        <div class="outputs">
+          <div class="output">...</div>
+        </div>
+      </details>
+    </section>
+    <section id="ch5_arr_slice">
+      <details >
+        <summary><h3>Impliment <var>array</var>.slice() from scratch</h3></summary>
+        <p>
+          Array.prototype.slice(<var>n</var>,[<var>s</var>]) returns a portion of an array without
+          altering the original array.</br>
+          The indices returned are [<var>n</var>, <var>s</var>).<br>
+          If <var>s</var> is undefined, return everythign following <var>n</var>, including <var>n</var>.
+        </p>
+        <div class="inputs">
+          A comma separated list<br>
+          Array <input type="text" class="go" value="0,1,2,3,4"><br>
+          <var>n</var> <input class="go" type="number" min="0" value="0"><br>
+          <var>s</var> <input class="go" type="number" min="0" value="0">
+        </div>
+        <div class="outputs">
+          <div class="output">...</div>
+          When <var>s</var> is <var>undefined</var>...
+          <div class="output">...</div>
+        </div>
+      </details>
+    </section>
+    <section id="ch5_findMedian">
+      <details >
+        <summary><h3>Find the median of two sorted arrays of the same size.</h3></summary>
+        <p>
+          Note:
+          <ul>
+            <li>The median is the middle number.</li>
+            <li>The median of an even number is the average of the two middle-most numbers</li>
+          </ul>
+        </p>
+        <div class="inputs">
+          Two arrays of comma seperated integers.<br>
+          Array 1: <input class="go" type="text" pattern="^(\d+(,\d+)*)?$" value="0,1,2,3,4,5">
+          <input class="go" type="button" value="rand"><br>
+          Array 2: <input class="go" type="text" pattern="^(\d+(,\d+)*)?$"       value="3,4,5,6,7,8">
+          <input class="go" type="button" value="rand"><br>
+        </div>
+        <div class="outputs">
+
+          <div class="output inlineFlex"></div><strong>O(<var>n</var>)</strong><br>
+          <div class="output inlineFlex"></div><strong>O(Log&#8322;(<var>n</var>))</strong>
+        </div>
+      </details>
+    </section>
+    <section id="ch5_findCommonElements">
+      <details >
+        <summary><h3>Find common elements in K sorted arrays.</h3></summary>
+        <p>
+          When given k(number) sorted arrays, return an array of only the elements that are common to all the arrays.
+        </p>
+        <div class="inputs">
+          Three arrays of comma seperated integers.<br>
+          Array 1: <input class="go" type="text" pattern="^(\d+(,\d+)*)?$" value="0,1,2,3">
+          <input class="go" type="button" value="rand"><br>
+          Array 2: <input class="go" type="text" pattern="^(\d+(,\d+)*)?$" value="0,1,2,3">
+          <input class="go" type="button" value="rand"><br>
+          Array 3: <input class="go" type="text" pattern="^(\d+(,\d+)*)?$" value="0,1,2,3">
+          <input class="go" type="button" value="rand"><br>
+        </div>
+        <div class="outputs">
+          <div class="output inlineFlex">...</div><strong>O(<var>nk</var>)</strong>
+        </div>
+      </details>
+    </section>
+    <hr>
+    <section id="ch5_spiralPrint">
+      <details >
+        <summary><h3>Spiral Print</h3></summary>
+        <p>
+          Exercise on page 71.
+        </p>
+        <div class="inputs">
+          <input type="button" class="go" value="rand"><br>
+          <input type="text"   disabled   value="..."><br>
+          <input type="text"   disabled   value="..."><br>
+          <input type="text"   disabled   value="..."><br>
+          <input type="text"   disabled   value="..."><br>
+        </div>
+        <div class="outputs">
+          <div class="output">
+        </div>
+      </details>
+    </section>
+    <section id="ch5_tictactoe">
+      <details >
+        <summary><h3>tic-tac-toe check</h3></summary>
+        <p>
+          Given a matrix representing a tic-tac-toe board
+          check to see if someone won, it was a tie, or the game has not yet ended.
+        </p>
+        <div class="inputs">
+          <input type="text" class="go tttB" pattern="^[-XO][-XO][-XO]$" value="XXO"><br>
+          <input type="text" class="go tttB" pattern="^[-XO][-XO][-XO]$" value="OXO"><br>
+          <input type="text" class="go tttB" pattern="^[-XO][-XO][-XO]$" value="XO-">
+        </div>
+        <div class="outputs">
+          <div class="output"></div>
+        </div>
+      </details>
+    </section>
+    <section id="ch5_pathFinding">
+      <details>
+        <summary><h3>Path Finding</h3></summary>
+        <p>
+          Bookmark: Page 75;<br>
+          Given a matrix representing a maze, find the path from the entrence (<var>e</var>)
+          to the exit (<var>x</var>).
+        </p>
+        <div class="inputs">
+          <input type="button" value="solve" class="go">
+          <div><pre class="maze">
+███x██████<br>
+██       █<br>
+███████ ██<br>
+█ █      █<br>
+█ ███ ████<br>
+█      ███<br>
+█████e████</pre>
+          <pre class="maze output">
+███x██████<br>
+██       █<br>
+███████ ██<br>
+█ █      █<br>
+█ ███ ████<br>
+█      ███<br>
+█████e████</pre></div>
+        </div>
+
+      </details>
+    </section>
+    <section id="ch5_matrixRotation">
+      <details >
+        <summary><h3>Matrix Rotation</h3></summary>
+        <p>
+          Rotate a given matrix 90deg counter clockwise
+        </p>
+        <div class="inputs inlineBlock">
+          <input type="button" class="go" value="rand"><br>
+          <input type="text"   disabled   value="..." class="rem5"><br>
+          <input type="text"   disabled   value="..." class="rem5"><br>
+          <input type="text"   disabled   value="..." class="rem5"><br>
+          <input type="text"   disabled   value="..." class="rem5"><br>
+        </div>
+        <div class="outputs inlineBlock">
+          <strong>Output</strong><br>
+          <input type="text"   disabled   value="..." class="outputClean rem5"><br>
+          <input type="text"   disabled   value="..." class="outputClean rem5"><br>
+          <input type="text"   disabled   value="..." class="outputClean rem5"><br>
+          <input type="text"   disabled   value="..." class="outputClean rem5"><br>
+        </div>
+      </details>
+    </section>
+
+  </details>
+</section> <!-- Chapter 5 end -->
+<section> <!--Ch6 -->
+  <details >
+    <summary ><h2>Ch: 6 Javascript Objects</h2></summary>
+    <details >
+      <summary>Object in Javascript are collections of Key : Value pairs.</summary>
+      <p>
+        The preffered way to create a new class is with prototypical <i>inheritance</i>.<br>
+        <spa class="ie">ie:</spa><pre>Function MyClass(){
+  this.property1 = 'A publicly available property'
+  let someVar = 'I'm mimicing a private property'
+    //But you'll need to make getters and setters to use me.
+  this.get_someVar = function(){ return someVar}
+  this.set_someVar = function(value){ someVar = value }
+}</pre>
+      </p>
+
+    </details>
+
+    <section id="ch6_addProp">
+      <details >
+        <summary><h3>Adding a property to an object</h3></summary>
+        <p>
+          Ad an exampleKey property to an empty Javascript obbect in two diffrent values.
+        </p>
+        <div class="inputs">
+          Base Object: <input type="text" disabled value="{}"><br>
+          exampleKey1: value <input type="text" disabled value="toaster"><br>
+          exampleKey2: value <input type="text" disabled value="cat"><br>
+        </div>
+        <div class="outputs">
+          <div class="output">
+        </div>
+      </details>
+    </section>
+    <section id="ch6_defineClasses">
+      <details >
+        <summary><h3>Defining classes</h3></summary>
+        <p>
+          Create two classes,: Animal and Dog.<br>
+          Animal's constructor should take two parameters: name and animalType.<br>
+          Animal should have two methods: sayName and sayAnimalType
+          Dog should inherit from the Animal class.
+        </p>
+        <div class="inputs">
+          <input class="go" type="button" value="sayName">
+          <input class="go" type="button" value="sayAnimalType">
+          <input class="go" type="button" value="bark">
+        </div>
+        <div class="outputs">
+          The Dog says...
+          <div class="output"></div>
+        </div>
+      </details>
+    </section>
+
+  </details>
+</section> <!-- Chapter 6 end -->
+<section>
+  <details >
+    <summary ><h2>Ch: 7 Javascript Memory Management</h2></summary>
+    <details >
+      <summary>Memory Management Notes</summary>
+      <p>
+        A <i>memory leak</i> is a failure to release discarded memory. Left unchecked, this process may consume all available membory.
+      </p>
+      <ul>
+        <li>A reference to an Object, or property therof, loads the entire object; not just the parts you use.</li>
+        <li>A var pointing to DOM element will leak if the DOM element is deleted.
+          <sup class="ie">ie:</sup><br>
+          <code>
+            ---.html---<br>
+            &lt;div id="thatDiv"&gt;<br>
+            ------------<br>
+            ---.js------<br>
+            var thatDiv = document.quereySelector('#thatDiv');
+            thatDiv.remove(); //Removes it from the DOM, but it is still taking up memory.
+            ------------<br>
+          </code><br>
+          This can be avoided by ensuring that the reference is confined to the scope in which it is used.
+        </li>
+        <li>
+          Anything in the global <var>window</var> object, is in memory, and will not be garbage collected.
+        </li>
+        <li>An object is cleared when all refrences to that object are cleared. Thus it is good practice to limit object references when possible.</li>
+        <li> The <strong>delete</strong> operator will remove unwanted <i>object property</i>s. <strong>delete</strong> will have no effect on non-objects.
+      </ul>
+
+    </details>
+</section> <!-- Chapter 7 end -->
+
+    <script src="ch1-6.js" charset="utf-8"></script>
+    <script src="master.js" charset="utf-8"></script>
+  </body>
+</html>

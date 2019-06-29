@@ -1,0 +1,14 @@
+{
+  "name": "javacript-datastructures-algorythms",
+  "version": "1.0.0",
+  "description": "A small project to keep my work in while running through a textbook on data structures and algorythms.",
+  "main": "ch1-6.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wesley Williams",
+  "license": "ISC",
+  "jshintConfig": {
+    "esversion": 8
+  }
+}
