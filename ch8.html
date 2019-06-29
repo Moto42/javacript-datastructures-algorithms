@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="master.css">
+    <title>Chapter 8, Recursion</title>
+  </head>
+  <body>
+    <h1> Javascript Algorythms and Data Structures</h1>
+    <h2>Ch: 8 Javascript Recursion</h2>
+    <details >
+      <summary>Any function which will call itself is said to be <i>recursive</i>.</summary>
+      <p>
+        Recursive solutions are a common way to impliment the "divide-and-conquer" method of problem solving.<br>
+        For recursion to work, there must be an identifiable <strong>base case</strong>. That is a circumstance in which it is no longer nessisary to re-call the recursive function. All recursive calls should be moving towards this base case, or else the function may never terminate.
+      </p>
+      <h3>Divide and Conquer</h3>
+      <p>
+        The Divide-and-Conquer method boils down to solving a problem by solving the sub-problems it is composed of.</p>
+      <h3>Tail Recursion</h3>
+      <p>Tail Recursion is a special case of recursion in which the very last thing the function does is call itself. All other calculations and desicitons are performed prior to the single recursive call on the final line.<br>
+        In theory this allows for recursive functions to take up only a single fram on the stack when the environment supports Proper Tail Calls... In reality only recent versions of Node and Opera.<br> sigh...
+      </p>
+
+    </details>
+
+    <section id="ch8_convertToBinary">
+      <details >
+        <summary><h3>Convert decimal to binary</h3></summary>
+        <p>
+          This can be done by repeatedly storing the modulo 2, and dividing by 2, until you hit 0 or 1.
+        </p>
+        <div class="inputs">
+          <input type="number" class="go" value="13">
+        </div>
+        <div class="outputs">
+          <div class="output"></div>
+        </div>
+      </details>
+    </section>
+    <section id="ch8_arrayPermutations">
+      <details open>
+        <summary><h3>Print all permutations of an Array</h3></summary>
+        <p>
+          This is a classic recursion, problem. Everyone asks it of their newbies.<br>
+          Also, stop feeling bad, because it is actualy hard to solve.
+          Let's bang our head on this wall, recursivly!
+        </p>
+        <div class="inputs">
+          A comma sepparated array of values<br>
+          <input class="go" type="button" value="go">
+          <input type="text" value="a,b,c,d,e,f,g" >
+        </div>
+        <div class="outputs">
+          <div class="output">...</div>
+        </div>
+      </details>
+    </section>
+
+    <script src="ch8.js" charset="utf-8"></script>
+    <script src="master.js" charset="utf-8"></script>
+  </body>
+</html>
