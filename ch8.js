@@ -33,21 +33,11 @@ sections.ch8_arrayPermutations = {
   permute : function (arr) {
     console.log('called', arr);
     //base case
-    if (arr.length <= 1) return [arr];
-    //recursion case
-    allPermutations = [];
-    for(let i in arr){//for each index in arr
-      let   tempArr = [...arr];
-      const prefix  = tempArr[i];
-      tempArr.splice(i,1);
-      const postfixArr = this.permute(tempArr);
-      console.log('pre',prefix,'p', postfixArr,);
-      for( let postfix of postfixArr){
-        allPermutations.push(prefix+postfix);
-      }
-    }
-    console.log(allPermutations);
-    return allPermutations;
+
+    if(arr.length <= 1) return arr;
+
+
+    return arr;
   },
 
 };
